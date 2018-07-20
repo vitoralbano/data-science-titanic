@@ -11875,15 +11875,7 @@
   </div>
   
   
-  <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-  </div>
-  <div class="inner_cell">
-  <div class="text_cell_render border-box-sizing rendered_html">
-  <hr>
   
-  </div>
-  </div>
-  </div>
   
   
   
@@ -11999,56 +11991,6 @@
   
   
   
-  
-  <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-  </div>
-  <div class="inner_cell">
-  <div class="text_cell_render border-box-sizing rendered_html">
-  <h1 id="Conclusão">Conclusão<a class="anchor-link" href="#Conclusão">¶</a></h1>
-  </div>
-  </div>
-  </div>
-  <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-  </div>
-  <div class="inner_cell">
-  <div class="text_cell_render border-box-sizing rendered_html">
-  <p>Ao analisar a amostra de dados de passageiros do Titanic, foi possível chegar as seguintes conclusões.</p>
-  <ul>
-  <li>A primeira classe apresentou o maior percentual de sobreviventes, com 62,6%, contra 47,2% da segunda e 24,2% da terceira. Tal diferença pode apontar que houve alguma facilidade ou favorecimento no acesso aos botes salva vidas para os passageiros da primeira classe.</li>
-  <li>Dentre os sobreviventes, 68% são mulheres e 32% homens</li>
-  <li>O grupo de classe e sexo que apresentou maior taxa de sobreviventes foi o feminino da primeira classe, com a relação de 96,7%</li>
-  <li>59,0% das crianças a bordo foram salvas</li>
-  <li>A idade média entre os sobreviventes era de 28,4 anos.</li>
-  </ul>
-  
-  </div>
-  </div>
-  </div>
-  <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-  </div>
-  <div class="inner_cell">
-  <div class="text_cell_render border-box-sizing rendered_html">
-  <h1 id="Limitações">Limitações<a class="anchor-link" href="#Limitações">¶</a></h1>
-  </div>
-  </div>
-  </div>
-  <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-  </div>
-  <div class="inner_cell">
-  <div class="text_cell_render border-box-sizing rendered_html">
-  <p>Inicialmente ao avaliar o conjunto de dados foi detectado que haviam campos como idade, embarcou e cabine, não preenchidos e que potencialmente prejudicariam a análise. 
-  Assim, foram feitos alguns ajustes como:</p>
-  <ul>
-  <li>Campos de idade com valor nulo foram preenchidos com a média</li>
-  <li>Foi efetuada uma breve análise sobre os passageiros que apresentavam o campo 'embarcou' como nulo e se haviam sobrevivido, assim, dado que o retorno foi positivo, estes foram removidos do conjunto de dados considerando que estes não embarcaram.</li>
-  </ul>
-  <p>Valores abreviados em local de embarque (embarcou) foram substituídos pelo nome do local sem abreviação.</p>
-  <p>Foram aplicadas traduções nos nomes das colunas e nos valores dos campos sobreviveu e sexo para auxiliar na criação de legendas dos gráficos.</p>
-  <p>Foi criado um campo de categorização da idade dos passageiros com o objetivo de mapea-los facilmente e levantar informações a respeito de cada grupo.</p>
-  
-  </div>
-  </div>
-  </div>
   <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
   </div>
   <div class="inner_cell">
@@ -12079,7 +12021,31 @@
   </div>
   <div class="inner_cell">
   <div class="text_cell_render border-box-sizing rendered_html">
-  <p>No primeiro instante, ao carregar o conjunto de dados, foi necessario avaliar suas características como, seu esquema de organização, consistência dos dados e a necessidade possíveis correções e adaptações que pudessem contribuir na manipulação e pesquisa. Neste passo foram aplicadas as seguintes mudanças:</p>
+  <p>No primeiro instante, ao carregar o conjunto de dados, foi necessario avaliar suas características como seu esquema de organização, consistência dos dados e a necessidade de possíveis correções ou adaptações que pudessem contribuir na manipulação, pesquisa e análise. Em tempo, o conjunto de dados apresentava a seguinte estrutura:</p>
+  <ul>
+  <li><strong>PassengerId:</strong> Números inteiros, correspondente ao número de identificação do passageiro;</li>
+  <li><strong>Survived:</strong> Preenchido com números inteiros, 1 para os que sobreviveram e 0 para os não sobreviveram;</li>
+  <li><strong>Pclass:</strong> Números inteiros correspondentes ao ordinal da Classe do passageiro, com valores 1, 2 e 3;</li>
+  <li><strong>Name:</strong> Nome do passageiro;</li>
+  <li><strong>Sex:</strong> Descrição do sexo do passageiro em inglês 'Female' e 'Male';</li>
+  <li><strong>Age:</strong> Número indicando a idade do passageiro;</li>
+  <li><strong>SibSp:</strong> Número de irmãos e ou conjuge abordo;</li>
+  <li><strong>Parch:</strong> Número de parentes como pais ou filhos a bordo;</li>
+  <li><strong>Ticket:</strong> Texto de identificação da passagem;</li>
+  <li><strong>Fare:</strong> Tarifa paga pelo passageiro;</li>
+  <li><strong>Cabin:</strong> Texto de identificação da cabine do passageiro;</li>
+  <li><strong>Embarked:</strong> Texto indicando o local de embarque do passageiro;</li>
+  </ul>
+  
+  </div>
+  </div>
+  </div>
+  <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+  </div>
+  <div class="inner_cell">
+  <div class="text_cell_render border-box-sizing rendered_html">
+  <p>Após o reconhecimento dos campos, é fundamental a sua validação. Buscar por valores nulos e preenche-los com valores pertinentes, encontrar linhas duplicadas, verificar tipos de dados e possíveis converções.
+  Neste passo foram aplicadas as seguintes mudanças:</p>
   <ul>
   <li>Nomes de colunas e valores foram traduzidos para o português de modo que ficassem no mesmo idioma da análise;</li>
   <li>Valores nulos na coluna 'idade' foram preenchidos com o valor médio;</li>
@@ -12120,7 +12086,7 @@
   </div>
   <div class="inner_cell">
   <div class="text_cell_render border-box-sizing rendered_html">
-  <h2 id="Perguntas">Perguntas<a class="anchor-link" href="#Perguntas">¶</a></h2>
+  <h2 id="Perguntas-e-respostas">Perguntas e respostas<a class="anchor-link" href="#Perguntas-e-respostas">¶</a></h2>
   </div>
   </div>
   </div>
@@ -12143,7 +12109,7 @@
   </div>
   <div class="cell border-box-sizing code_cell rendered">
   <div class="input">
-  <div class="prompt input_prompt">In&nbsp;[328]:</div>
+  <div class="prompt input_prompt">In&nbsp;[58]:</div>
   <div class="inner_cell">
       <div class="input_area">
   <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_survivors</span><span class="p">()</span>
@@ -12194,7 +12160,7 @@
   </div>
   <div class="cell border-box-sizing code_cell rendered">
   <div class="input">
-  <div class="prompt input_prompt">In&nbsp;[329]:</div>
+  <div class="prompt input_prompt">In&nbsp;[59]:</div>
   <div class="inner_cell">
       <div class="input_area">
   <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_children_balance</span><span class="p">()</span>
@@ -12245,7 +12211,7 @@
   </div>
   <div class="cell border-box-sizing code_cell rendered">
   <div class="input">
-  <div class="prompt input_prompt">In&nbsp;[330]:</div>
+  <div class="prompt input_prompt">In&nbsp;[60]:</div>
   <div class="inner_cell">
       <div class="input_area">
   <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_age_dist</span><span class="p">()</span>
@@ -12296,7 +12262,7 @@
   </div>
   <div class="cell border-box-sizing code_cell rendered">
   <div class="input">
-  <div class="prompt input_prompt">In&nbsp;[331]:</div>
+  <div class="prompt input_prompt">In&nbsp;[61]:</div>
   <div class="inner_cell">
       <div class="input_area">
   <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_surv_by_class</span><span class="p">()</span>
@@ -12312,7 +12278,7 @@
   
   <div class="output_area">
   
-  <div class="prompt output_prompt">Out[331]:</div>
+  <div class="prompt output_prompt">Out[61]:</div>
   
   
   
@@ -12421,7 +12387,7 @@
   </div>
   <div class="cell border-box-sizing code_cell rendered">
   <div class="input">
-  <div class="prompt input_prompt">In&nbsp;[332]:</div>
+  <div class="prompt input_prompt">In&nbsp;[62]:</div>
   <div class="inner_cell">
       <div class="input_area">
   <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sex_survivors_compare</span><span class="p">()</span>
@@ -12455,7 +12421,7 @@
   </div>
   <div class="cell border-box-sizing code_cell rendered">
   <div class="input">
-  <div class="prompt input_prompt">In&nbsp;[333]:</div>
+  <div class="prompt input_prompt">In&nbsp;[63]:</div>
   <div class="inner_cell">
       <div class="input_area">
   <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'sobreviveu == "Sim"'</span><span class="p">)[</span><span class="s1">'sexo'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -12471,7 +12437,7 @@
   
   <div class="output_area">
   
-  <div class="prompt output_prompt">Out[333]:</div>
+  <div class="prompt output_prompt">Out[63]:</div>
   
   
   
@@ -12508,7 +12474,7 @@
   </div>
   <div class="cell border-box-sizing code_cell rendered">
   <div class="input">
-  <div class="prompt input_prompt">In&nbsp;[334]:</div>
+  <div class="prompt input_prompt">In&nbsp;[64]:</div>
   <div class="inner_cell">
       <div class="input_area">
   <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_survivors_by_class_sex</span><span class="p">()</span>
@@ -12524,7 +12490,7 @@
   
   <div class="output_area">
   
-  <div class="prompt output_prompt">Out[334]:</div>
+  <div class="prompt output_prompt">Out[64]:</div>
   
   
   
@@ -12631,7 +12597,7 @@
   </div>
   <div class="cell border-box-sizing code_cell rendered">
   <div class="input">
-  <div class="prompt input_prompt">In&nbsp;[335]:</div>
+  <div class="prompt input_prompt">In&nbsp;[65]:</div>
   <div class="inner_cell">
       <div class="input_area">
   <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'embarcou'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
@@ -12647,7 +12613,7 @@
   
   <div class="output_area">
   
-  <div class="prompt output_prompt">Out[335]:</div>
+  <div class="prompt output_prompt">Out[65]:</div>
   
   
   
@@ -12716,7 +12682,7 @@
   </div>
   <div class="cell border-box-sizing code_cell rendered">
   <div class="input">
-  <div class="prompt input_prompt">In&nbsp;[336]:</div>
+  <div class="prompt input_prompt">In&nbsp;[66]:</div>
   <div class="inner_cell">
       <div class="input_area">
   <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'sobreviveu == "Sim" &amp; sexo == "Masculino"'</span><span class="p">)</span><span class="o">.</span><span class="n">idade</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
@@ -12732,7 +12698,7 @@
   
   <div class="output_area">
   
-  <div class="prompt output_prompt">Out[336]:</div>
+  <div class="prompt output_prompt">Out[66]:</div>
   
   
   
@@ -12766,7 +12732,7 @@
   </div>
   <div class="cell border-box-sizing code_cell rendered">
   <div class="input">
-  <div class="prompt input_prompt">In&nbsp;[337]:</div>
+  <div class="prompt input_prompt">In&nbsp;[67]:</div>
   <div class="inner_cell">
       <div class="input_area">
   <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'sobreviveu == "Sim" &amp; sexo == "Masculino"'</span><span class="p">)</span><span class="o">.</span><span class="n">idade</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
@@ -12782,7 +12748,7 @@
   
   <div class="output_area">
   
-  <div class="prompt output_prompt">Out[337]:</div>
+  <div class="prompt output_prompt">Out[67]:</div>
   
   
   
@@ -12816,7 +12782,7 @@
   </div>
   <div class="cell border-box-sizing code_cell rendered">
   <div class="input">
-  <div class="prompt input_prompt">In&nbsp;[338]:</div>
+  <div class="prompt input_prompt">In&nbsp;[68]:</div>
   <div class="inner_cell">
       <div class="input_area">
   <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'sobreviveu == "Sim" &amp; sexo == "Feminino"'</span><span class="p">)</span><span class="o">.</span><span class="n">idade</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
@@ -12832,7 +12798,7 @@
   
   <div class="output_area">
   
-  <div class="prompt output_prompt">Out[338]:</div>
+  <div class="prompt output_prompt">Out[68]:</div>
   
   
   
@@ -12866,7 +12832,7 @@
   </div>
   <div class="cell border-box-sizing code_cell rendered">
   <div class="input">
-  <div class="prompt input_prompt">In&nbsp;[339]:</div>
+  <div class="prompt input_prompt">In&nbsp;[69]:</div>
   <div class="inner_cell">
       <div class="input_area">
   <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'sobreviveu == "Sim" &amp; sexo == "Feminino"'</span><span class="p">)</span><span class="o">.</span><span class="n">idade</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
@@ -12882,7 +12848,7 @@
   
   <div class="output_area">
   
-  <div class="prompt output_prompt">Out[339]:</div>
+  <div class="prompt output_prompt">Out[69]:</div>
   
   
   
@@ -12910,7 +12876,65 @@
   </div>
   <div class="inner_cell">
   <div class="text_cell_render border-box-sizing rendered_html">
-  <h2 id="Conclusão">Fim<a class="anchor-link" href="#Conclusão">¶</a></h2>
+  <hr>
+  
+  </div>
+  </div>
+  </div>
+  <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+  </div>
+  <div class="inner_cell">
+  <div class="text_cell_render border-box-sizing rendered_html">
+  <h1 id="Conclusão">Conclusão<a class="anchor-link" href="#Conclusão">¶</a></h1>
+  </div>
+  </div>
+  </div>
+  <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+  </div>
+  <div class="inner_cell">
+  <div class="text_cell_render border-box-sizing rendered_html">
+  <p>Ao analisar a amostra de dados de passageiros do Titanic, foi possível chegar as seguintes conclusões.</p>
+  <ul>
+  <li>A primeira classe apresentou o maior percentual de sobreviventes, com 62,6%, contra 47,2% da segunda e 24,2% da terceira. Tal diferença pode apontar que houve alguma facilidade ou favorecimento no acesso aos botes salva vidas para os passageiros da primeira classe.</li>
+  <li>Dentre os sobreviventes, 68% são mulheres e 32% homens</li>
+  <li>O grupo de classe e sexo que apresentou maior taxa de sobreviventes foi o feminino da primeira classe, com a relação de 96,7%</li>
+  <li>59,0% das crianças a bordo foram salvas</li>
+  <li>A idade média entre os sobreviventes era de 28,4 anos.</li>
+  </ul>
+  
+  </div>
+  </div>
+  </div>
+  <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+  </div>
+  <div class="inner_cell">
+  <div class="text_cell_render border-box-sizing rendered_html">
+  <h1 id="Limitações">Limitações<a class="anchor-link" href="#Limitações">¶</a></h1>
+  </div>
+  </div>
+  </div>
+  <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+  </div>
+  <div class="inner_cell">
+  <div class="text_cell_render border-box-sizing rendered_html">
+  <p>Inicialmente ao avaliar o conjunto de dados foi detectado que haviam campos como idade, embarcou e cabine, não preenchidos e que potencialmente prejudicariam a análise. 
+  Assim, foram feitos alguns ajustes como:</p>
+  <ul>
+  <li>Campos de idade com valor nulo foram preenchidos com a média</li>
+  <li>Foi efetuada uma breve análise sobre os passageiros que apresentavam o campo 'embarcou' como nulo e se haviam sobrevivido, assim, dado que o retorno foi positivo, estes foram removidos do conjunto de dados considerando que estes não embarcaram.</li>
+  </ul>
+  <p>Valores abreviados em local de embarque (embarcou) foram substituídos pelo nome do local sem abreviação.</p>
+  <p>Foram aplicadas traduções nos nomes das colunas e nos valores dos campos sobreviveu e sexo para auxiliar na criação de legendas dos gráficos.</p>
+  <p>Foi criado um campo de categorização da idade dos passageiros com o objetivo de mapea-los facilmente e levantar informações a respeito de cada grupo.</p>
+  
+  </div>
+  </div>
+  </div>
+  <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+  </div>
+  <div class="inner_cell">
+  <div class="text_cell_render border-box-sizing rendered_html">
+  <h2 id="Fim">Fim<a class="anchor-link" href="#Fim">¶</a></h2>
   </div>
   </div>
   </div>
